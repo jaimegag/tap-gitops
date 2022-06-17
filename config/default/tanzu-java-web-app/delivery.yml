@@ -12,10 +12,12 @@ spec:
   template:
     metadata:
       annotations:
+        apps.tanzu.vmware.com/live-update: "true"
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
         boot.spring.io/version: 2.5.14
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
+          developer-conventions/add-source-image-label
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
           spring-boot-convention/spring-boot-web
@@ -23,6 +25,7 @@ spec:
           appliveview-sample/app-live-view-connector-boot
           appliveview-sample/app-live-view-appflavours-boot
           appliveview-sample/app-live-view-systemproperties
+        developer.apps.tanzu.vmware.com/image-source-digest: main/48eeff5973331eed04c692c0bb1bdd82a02df4ff
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
