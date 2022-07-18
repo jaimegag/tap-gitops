@@ -12,10 +12,14 @@ spec:
   template:
     metadata:
       annotations:
+        apps.tanzu.vmware.com/live-update: "true"
+        autoscaling.knative.dev/maxScale: "1"
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
         boot.spring.io/version: 2.5.14
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
+          developer-conventions/live-update-convention
+          developer-conventions/add-source-image-label
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
           spring-boot-convention/spring-boot-web
@@ -24,6 +28,7 @@ spec:
           appliveview-sample/app-live-view-connector-boot
           appliveview-sample/app-live-view-appflavours-boot
           appliveview-sample/app-live-view-systemproperties
+        developer.apps.tanzu.vmware.com/image-source-digest: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/tanzu-java-web-app-source:latest@sha256:5ae1b721fcf0cba36a91671de44669a4ddef475d6cb70f78223b8dda4ca1cc40
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
@@ -41,7 +46,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/tanzu-java-web-app-default@sha256:151592a650293ff323a40a1cb5906acdaf373ad378b9770cfa34085dd857b972
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/tanzu-java-web-app-default@sha256:ee7da433f2cd35ad1b484cfb7589c1006a1a6a4a5a551b17ba393caf6e73b1c2
         name: workload
         ports:
         - containerPort: 8080
