@@ -48,7 +48,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/spring-sensors-default@sha256:6a63c06a78f387e76448457a09b5374f80e88c7c0d4d642fb794ca33379418de
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/spring-sensors-default@sha256:c0a6d12458fab027393ae8810d454f3b6d9f3b65254d5ab1407a74b9541e4c04
         livenessProbe:
           httpGet:
             path: /livez
