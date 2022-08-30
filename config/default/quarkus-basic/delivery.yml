@@ -23,7 +23,7 @@ spec:
         carto.run/workload-name: quarkus-basic
     spec:
       containers:
-      - image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/quarkus-basic-default@sha256:ceee473647907c608f06c5049f1c833b0c554f386a95a6834dfaeb034a3249e5
+      - image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/quarkus-basic-default@sha256:6e2b6f68115c32a950276ef6f6c00b023d9c728524c7103f33e101fff5cb0347
         name: workload
         resources: {}
         securityContext:
