@@ -36,7 +36,7 @@ spec:
           appliveview-sample/app-live-view-connector-boot
           appliveview-sample/app-live-view-appflavours-boot
           appliveview-sample/app-live-view-systemproperties
-        developer.apps.tanzu.vmware.com/image-source-digest: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/customer-profile-source:latest@sha256:96852915d5f9e73b48235632a142d1edbb52d15c0cac7f42cc0ca50756195e92
+        developer.apps.tanzu.vmware.com/image-source-digest: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/customer-profile-source:latest@sha256:4185a1357f66c14b5027e9c22faec85e967bd04242e0c202596f0a208f72671c
         developer.conventions/target-containers: workload
         services.conventions.apps.tanzu.vmware.com/postgres: postgresql/42.3.6
       labels:
@@ -61,7 +61,7 @@ spec:
           value: "9005"
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/customer-profile-default@sha256:aefc9cbf5ac302c8767ac7dd41c6d1cfeb9248e5e2ccacc8c67fb003b7a75714
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/customer-profile-default@sha256:7680b8d85ac6837e065bb2b4e2a7f4e9245d914f8fea14dcd7b69d9fdc5556cb
         livenessProbe:
           httpGet:
             path: /livez
