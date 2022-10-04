@@ -15,13 +15,8 @@ spec:
   template:
     metadata:
       annotations:
-        apps.tanzu.vmware.com/debug: "true"
-        apps.tanzu.vmware.com/live-update: "true"
         autoscaling.knative.dev/minScale: "1"
-        conventions.carto.run/applied-conventions: |-
-          developer-conventions/add-source-image-label
-          appliveview-sample/app-live-view-appflavour-check
-        developer.apps.tanzu.vmware.com/image-source-digest: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/nodejs-demoapp:latest@sha256:ec6e1a65585b2cefe248f777375a865530236978d1aec636743852c351e9baf7
+        conventions.carto.run/applied-conventions: appliveview-sample/app-live-view-appflavour-check
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
@@ -31,7 +26,7 @@ spec:
         carto.run/workload-name: nodejs-demoapp
     spec:
       containers:
-      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/nodejs-demoapp-default@sha256:ce112b648728e88cb6cab15edf74978f4dcf53aae0fae3a68271175f36efde6a
+      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/nodejs-demoapp-default@sha256:85b2bc84563841cd68fcb38621278566eb9eb933e09e95e62471a06d9cd7eb5f
         name: workload
         resources: {}
         securityContext:
