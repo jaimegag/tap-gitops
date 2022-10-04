@@ -26,7 +26,7 @@ spec:
         carto.run/workload-name: nodejs-workload
     spec:
       containers:
-      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/nodejs-workload-default@sha256:24ae4c822ad9557215b2e0e22788252b78140b888796bb41a63c9b085ad444ed
+      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/nodejs-workload-default@sha256:792d63a86178c12e765756ea445ab59c834dc419dd78ba172b1a1ec1d91ffd2b
         name: workload
         resources: {}
         securityContext:
