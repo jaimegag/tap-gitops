@@ -44,7 +44,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/tanzu-java-web-app-default@sha256:75c4793f22e4448b8aba8fb83cd9ea071bdad0081ba9929123512cbc3264672e
+        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/tanzu-java-web-app-default@sha256:c9888e4801b149582d4117e1a83e36aa86937a4f8010813b7c66ac5d32ed8462
         name: workload
         ports:
         - containerPort: 8080
