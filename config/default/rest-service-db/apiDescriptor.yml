@@ -13,7 +13,7 @@ metadata:
     carto.run/workload-name: rest-service-db
 spec:
   type: openapi
-  description: API Desc for rest service db
+  description: API Desc customer-profile
   system: Tanzu Team
   owner: Tanzu Team
   location:
