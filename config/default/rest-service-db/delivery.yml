@@ -61,7 +61,7 @@ spec:
           value: "9005"
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/rest-service-db-default@sha256:123b693ed5dd33d331f237c3537040221b03c60385fe5eb84b0881086cfe86f6
+        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/rest-service-db-default@sha256:93d0b0b7cbb9392dbddf32d50cc24bed2b8a51b046786391c3474e58ab46f489
         livenessProbe:
           httpGet:
             path: /livez
