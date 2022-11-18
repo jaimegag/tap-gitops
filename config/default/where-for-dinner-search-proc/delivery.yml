@@ -51,7 +51,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080"
-        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/where-for-dinner-search-proc-default@sha256:a05e75c9424e25e14567c85c070c958d124b645c53b99f9b6c5715ac61d1bbe3
+        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/where-for-dinner-search-proc-default@sha256:96ce4c4ced2c7160f5d98090fa293b874f09ce326e975cf80967bbd413aa779b
         livenessProbe:
           httpGet:
             path: /livez
