@@ -31,7 +31,7 @@ spec:
         networking.knative.dev/visibility: cluster-local
     spec:
       containers:
-      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/where-for-dinner-ui-default@sha256:1d6b43d881b636a1a1ab34523a777db194fa1ffc146582ee9a2af24f2c75cc8c
+      - image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/where-for-dinner-ui-default@sha256:7df13ee9b673810ca122b82a4cc750b0e8022b16ac80e2a10a0c72c69ae7469c
         name: workload
         resources: {}
         securityContext:
