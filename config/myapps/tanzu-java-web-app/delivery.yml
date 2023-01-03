@@ -46,7 +46,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/workloads/tanzu-java-web-app-myapps@sha256:313db3b979bfedff65b90e6bbb091a39d9da17e959f869cba5dc2f4ff8f8017a
+        image: harbor.korok.tkg-aws-lab.hyrulelab.com/tap/workloads/tanzu-java-web-app-myapps@sha256:f6d62697317b89dc56ccd1fe2b57bea34c9f7cbec4882e76da58ccabb8ed7f1a
         name: workload
         ports:
         - containerPort: 8080
