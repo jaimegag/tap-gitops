@@ -36,7 +36,7 @@ spec:
       - env:
         - name: REACT_APP_PROFILE
           value: nonsecure
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/where-for-dinner-ui-myapps@sha256:f69bc6ba273efa35a499e49d58cc502cd75ff643f9786a57ce637b4c12aa6d2a
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/where-for-dinner-ui-myapps@sha256:0b6382b61accada7751163c5b49dca5b5c4e975bfc84c87c734c644109e644a7
         name: workload
         resources:
           limits:
