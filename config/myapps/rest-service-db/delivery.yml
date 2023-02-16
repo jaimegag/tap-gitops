@@ -38,7 +38,7 @@ spec:
           spring-boot-convention/app-live-view-appflavours-boot
           spring-boot-convention/service-intent-postgres
           appliveview-sample/app-live-view-appflavour-check
-        developer.apps.tanzu.vmware.com/image-source-digest: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/rest-service-db:latest@sha256:d123ee492975346f68f4c0fa9cef83484d2fde358a430e01acc2351e984d16b5
+        developer.apps.tanzu.vmware.com/image-source-digest: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/rest-service-db:latest@sha256:372abe1bd7669511996c75595ca1985b76dad557ca80691371b218567a0c07c2
         developer.conventions/target-containers: workload
         services.conventions.carto.run/postgres: postgresql/42.3.7
       labels:
@@ -65,7 +65,7 @@ spec:
           value: "9005"
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/rest-service-db-myapps@sha256:d4bb0401b8c8018c3929387f9fbd3ad7d734c881805a6b33b2e125adabf1abe7
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/rest-service-db-myapps@sha256:0246d67ab83dc040af42247d44039084867f0cf7cab89ded0f8cbdbcf9a09b13
         livenessProbe:
           httpGet:
             path: /livez
