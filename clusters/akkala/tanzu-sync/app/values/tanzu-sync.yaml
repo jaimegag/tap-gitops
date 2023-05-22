@@ -4,4 +4,4 @@ git:
   ref: origin/main
   sub_path: clusters/akkala/cluster-config
 tap_package_repository:
-  oci_repository: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/tap-package
+  oci_repository: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/tap-packages
