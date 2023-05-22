@@ -8,10 +8,10 @@ metadata:
 spec:
   serviceAccountName: sync-sa
   fetch:
-  - git:
-      ref: origin/main
-      url: https://github.com/jaimegag/tap-gitops.git
-      subPath: clusters/zora/cluster-config/dependant-resources
+    - git:
+        ref: origin/main
+        url: https://github.com/jaimegag/tap-gitops.git
+        subPath: clusters/akkala/cluster-config/dependant-resources
   template:
     - sops:
         age:
@@ -19,6 +19,6 @@ spec:
             name: sync-age-identity
     - ytt: {}
   deploy:
-  - kapp:
-      rawOptions:
-      - --dangerous-allow-empty-list-of-resources=true
+    - kapp:
+        rawOptions:
+          - --dangerous-allow-empty-list-of-resources=true
