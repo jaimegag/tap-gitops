@@ -42,7 +42,7 @@ spec:
         tanzu.app.live.view.application.name: weatherforecast-steeltoe
     spec:
       containers:
-      - image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/weatherforecast-steeltoe-myapps@sha256:53f546ecb9a62d12b70315db90465d5e19c1f2d7ad69263d2ed68ff4b718f29b
+      - image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/weatherforecast-steeltoe-myapps@sha256:80b7d2e3211c9057e63532cee7efc45ef448ab60dc705fc71c19c03485796479
         name: workload
         resources: {}
         securityContext:
