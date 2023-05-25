@@ -7,7 +7,7 @@ metadata:
     ootb.apps.tanzu.vmware.com/servicebinding-workload: "true"
     kapp.k14s.io/change-rule: upsert after upserting servicebinding.io/ServiceBindings
   labels:
-    app.kubernetes.io/part-of: tanzu-java-jenkins
+    app.kubernetes.io/part-of: tanzu-java-web-app
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: server
@@ -17,7 +17,7 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/component: run
-      app.kubernetes.io/part-of: tanzu-java-jenkins
+      app.kubernetes.io/part-of: tanzu-java-web-app
       apps.tanzu.vmware.com/auto-configure-actuators: "true"
       apps.tanzu.vmware.com/has-tests: "true"
       apps.tanzu.vmware.com/workload-type: server
@@ -48,7 +48,7 @@ spec:
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
-        app.kubernetes.io/part-of: tanzu-java-jenkins
+        app.kubernetes.io/part-of: tanzu-java-web-app
         apps.tanzu.vmware.com/auto-configure-actuators: "true"
         apps.tanzu.vmware.com/has-tests: "true"
         apps.tanzu.vmware.com/workload-type: server
@@ -64,7 +64,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/tanzu-java-jenkins-myapps@sha256:195e28567d44d9e8877ec7d1c6aa394289ef8c4515f1607e3f47f5daa78a105b
+        image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/tanzu-java-jenkins-myapps@sha256:f32165b4db60665c0b1372304c55d27fbd78d68de247267c196c205ac783e9d0
         livenessProbe:
           httpGet:
             path: /livez
@@ -89,7 +89,7 @@ kind: Service
 metadata:
   name: tanzu-java-jenkins
   labels:
-    app.kubernetes.io/part-of: tanzu-java-jenkins
+    app.kubernetes.io/part-of: tanzu-java-web-app
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: server
@@ -98,7 +98,7 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/component: run
-    app.kubernetes.io/part-of: tanzu-java-jenkins
+    app.kubernetes.io/part-of: tanzu-java-web-app
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: server
