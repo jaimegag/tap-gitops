@@ -29,7 +29,7 @@ spec:
           developer-conventions/add-source-image-label
           spring-boot-convention/auto-configure-actuators-check
           spring-boot-convention/app-live-view-appflavour-check
-        developer.apps.tanzu.vmware.com/image-source-digest: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads:latest@sha256:efb5a1a61fa6c7a88a56b94306a4957c06fdea040755f5d70840fbe3399b28ac
+        developer.apps.tanzu.vmware.com/image-source-digest: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads:latest@sha256:8e0ee68bba2ee1ac4ead2723df32219af785bf38122dd64d49d85d5942393fca
         developer.conventions/target-containers: workload
       labels:
         app.kubernetes.io/component: run
@@ -42,7 +42,7 @@ spec:
         tanzu.app.live.view.application.name: weatherforecast-steeltoe
     spec:
       containers:
-      - image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/weatherforecast-steeltoe-myapps@sha256:4c3316b2bc6dec1834aeac2279545e4e93b607f30b30079e3c6960b5c9874438
+      - image: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/workloads/weatherforecast-steeltoe-myapps@sha256:c950050065b187e3864672ba3d89a0b6237b231d7cc6c76768b6f22fbb367c6a
         name: workload
         resources: {}
         securityContext:
