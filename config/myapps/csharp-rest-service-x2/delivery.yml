@@ -45,7 +45,7 @@ spec:
       - env:
         - name: DOTNET_CLI_TELEMETRY_OPTOUT
           value: "true"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/csharp-rest-service-x2-myapps@sha256:cdf2773b8cb97ff446c5f2e4e1368052fe0a5d51e9c3668daea456d3222ef8d0
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/csharp-rest-service-x2-myapps@sha256:118217bc7d2d3fbc45833bfb121800e91ef615cb1e1ac8ce7f1876c8da936cd5
         name: workload
         resources: {}
         securityContext:
