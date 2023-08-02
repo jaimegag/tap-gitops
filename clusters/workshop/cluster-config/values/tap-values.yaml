@@ -21,8 +21,15 @@ tap_install:
 
     tap_gui:
       service_type: ClusterIP
+      tls:
+        namespace: contour-tls
+        secretName: tls
       ingressEnabled: "true"
       app_config:
         auth:
           allowGuestAccess: true
           environment: development
+    
+    cnrs:
+      default_tls_secret: contour-tls/tls
+      domain_template: "{{.Name}}-{{.Namespace}}.{{.Domain}}" # this is a go-template
