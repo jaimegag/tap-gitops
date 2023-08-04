@@ -61,7 +61,7 @@ tap_install:
           secrets:
             - git-https
     local_source_proxy:
-      repository: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap-source-proxy
+      repository: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/tap-source-proxy
       push_secret:
         name: lsp-push-credentials
         namespace: tap-install
