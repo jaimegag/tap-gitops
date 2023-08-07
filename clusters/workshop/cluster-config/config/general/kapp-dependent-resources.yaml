@@ -11,8 +11,8 @@ spec:
   fetch:
     - git:
         ref: origin/main
-        url: https://github.com/jaimegag/tap-gitops.git
-        subPath: clusters/zora/cluster-config/dependant-resources
+        url: https://github.com/jaimegag/tap-gitops
+        subPath: clusters/workshop/cluster-config/dependent-resources
   template:
     - sops:
         age:
@@ -21,5 +21,4 @@ spec:
     - ytt: {}
   deploy:
     - kapp:
-        rawOptions:
-          - --dangerous-allow-empty-list-of-resources=true
+        rawOptions: ["--dangerous-allow-empty-list-of-resources=true"]

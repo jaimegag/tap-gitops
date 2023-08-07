@@ -30,13 +30,13 @@ tap_install:
       #   namespace: tanzu-system-ingress
       metadataStoreAutoconfiguration: true
       app_config:
-        app:
+        app: # not needed anymore!
           baseUrl: https://tap-gui.tap.zora.tkg-vsp-lab.hyrulelab.com
         catalog:
           locations:
             - type: url
-              target: https://github.com/jaimegag/tap-zone/blob/main/tap-gui/blank/catalog-info.yaml
-        backend:
+              target: https://github.com/jaimegag/tap-zone/blob/main/tap-gui/blank/catalog-info.yaml  # not needed!
+        backend: # not needed anymore!
           baseUrl: https://tap-gui.tap.zora.tkg-vsp-lab.hyrulelab.com
           cors:
             origin: https://tap-gui.tap.zora.tkg-vsp-lab.hyrulelab.com
