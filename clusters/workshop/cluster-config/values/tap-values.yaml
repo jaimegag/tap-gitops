@@ -59,15 +59,15 @@ tap_install:
             - host: github.com
       metadataStoreAutoconfiguration: true
       kubernetes:
-          clusterLocatorMethods:
-            - type: 'config'
-              clusters:
-                - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
-                  name: host
-                  authProvider: serviceAccount
-                  serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
-                  skipTLSVerify: true
-                  skipMetricsLookup: false
+        clusterLocatorMethods:
+          - type: 'config'
+            clusters:
+              - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
+                name: host
+                authProvider: serviceAccount
+                serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
+                skipTLSVerify: true
+                skipMetricsLookup: false
 
     
     cnrs:
