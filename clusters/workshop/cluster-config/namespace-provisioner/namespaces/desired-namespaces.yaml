@@ -2,3 +2,4 @@
 ---
 namespaces:
   - name: developer-ns
+  - name: workload-ns

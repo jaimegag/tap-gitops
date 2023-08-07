@@ -13,6 +13,27 @@ tap_install:
 
     ceip_policy_disclosed: true
 
+    supply_chain: testing_scanning
+    ootb_supply_chain_testing_scanning:
+      gitops:
+        ssh_secret: git-https
+        branch: main
+        commit_message: "Update from TAP Supply Chain Choreographer"
+        server_address: https://github.com/
+        repository_owner: jaimegag
+        repository_name: tap-gitops
+
+    metadata_store:
+      app_service_type: ClusterIP
+      ns_for_export_app_cert: "*"
+
+    scanning:
+      metadataStore:
+        url: ""
+
+    grype:
+      targetImagePullSecret: registry-credentials
+
     # These packages will be deprecated in future versions of TAP, so we will exclude them to free up space on the cluster
     excluded_packages:
       - learningcenter.tanzu.vmware.com
@@ -29,6 +50,7 @@ tap_install:
         auth:
           allowGuestAccess: true
           environment: development
+      metadataStoreAutoconfiguration: true
     
     cnrs:
       default_tls_secret: contour-tls/tls
