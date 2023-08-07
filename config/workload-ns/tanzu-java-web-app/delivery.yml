@@ -11,7 +11,7 @@ metadata:
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     apps.tanzu.vmware.com/has-tests: "true"
     apps.tanzu.vmware.com/workload-type: web
-    kapp.k14s.io/app: "1690993949477581089"
+    kapp.k14s.io/app: "1691430704770035476"
     kapp.k14s.io/association: v1.720015ac397bc7c908220614b715e019
     app.kubernetes.io/component: run
     carto.run/workload-name: tanzu-java-web-app
@@ -35,7 +35,7 @@ spec:
           spring-boot-convention/app-live-view-appflavours-boot
         developer.conventions/target-containers: workload
         kapp.k14s.io/identity: v1;workload-ns/carto.run/Workload/tanzu-java-web-app;carto.run/v1alpha1
-        kapp.k14s.io/original: '{"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"labels":{"app.kubernetes.io/part-of":"tanzu-java-web-app","apps.tanzu.vmware.com/auto-configure-actuators":"true","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"web","kapp.k14s.io/app":"1690993949477581089","kapp.k14s.io/association":"v1.720015ac397bc7c908220614b715e019"},"name":"tanzu-java-web-app","namespace":"workload-ns"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/Tanzu-Solutions-Engineering/tanzu-java-web-app"}}}}'
+        kapp.k14s.io/original: '{"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"labels":{"app.kubernetes.io/part-of":"tanzu-java-web-app","apps.tanzu.vmware.com/auto-configure-actuators":"true","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"web","kapp.k14s.io/app":"1691430704770035476","kapp.k14s.io/association":"v1.720015ac397bc7c908220614b715e019"},"name":"tanzu-java-web-app","namespace":"workload-ns"},"spec":{"build":{"env":[{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"annotations","value":{"autoscaling.knative.dev/minScale":"1"}}],"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/Tanzu-Solutions-Engineering/tanzu-java-web-app"}}}}'
         kapp.k14s.io/original-diff-md5: c6e94dc94aed3401b5d0f26ed6c0bff3
       labels:
         app.kubernetes.io/component: run
@@ -45,7 +45,7 @@ spec:
         apps.tanzu.vmware.com/workload-type: web
         carto.run/workload-name: tanzu-java-web-app
         conventions.carto.run/framework: spring-boot
-        kapp.k14s.io/app: "1690993949477581089"
+        kapp.k14s.io/app: "1691430704770035476"
         kapp.k14s.io/association: v1.720015ac397bc7c908220614b715e019
         tanzu.app.live.view: "true"
         tanzu.app.live.view.application.actuator.path: actuator
@@ -57,7 +57,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/tanzu-java-web-app-workload-ns@sha256:ac6dbe3c9f106a86fee92669375b9f493c88ebc26fb89aac95a23c7a8d339f5a
+        image: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap/workloads/tanzu-java-web-app-workload-ns@sha256:14102caa4ee5b709077153e12704333510d269b2c35fdd81faaf093e4eb222c3
         livenessProbe:
           httpGet:
             path: /livez
