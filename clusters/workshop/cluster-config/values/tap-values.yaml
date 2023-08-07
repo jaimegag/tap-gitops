@@ -50,7 +50,15 @@ tap_install:
         auth:
           allowGuestAccess: true
           environment: development
+        catalog:
+          locations:
+            - type: url
+              target: https://github.com/Tanzu-Solutions-Engineering/tanzu-java-web-app/blob/main/catalog/catalog-info.yaml
+        integrations:
+          github:
+            - host: github.com
       metadataStoreAutoconfiguration: true
+
     
     cnrs:
       default_tls_secret: contour-tls/tls
