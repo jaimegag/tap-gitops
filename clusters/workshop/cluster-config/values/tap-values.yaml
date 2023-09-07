@@ -8,8 +8,8 @@ tap_install:
       ingress_issuer: ""
       image_registry:
         project_path: harbor.rito.tkg-vsp-lab.hyrulelab.com/tap # Image registry project path (e.g. myregistry.azurecr.io/tap/tap-images)
-        username: admin # Registry username
-      kubernetes_version: 1.25.7 # Kubernetes version (e.g. 1.25.9)
+        username: tap-admin # Registry username
+      kubernetes_version: 1.26.5 # Kubernetes version (e.g. 1.25.9)
 
     ceip_policy_disclosed: true
 
