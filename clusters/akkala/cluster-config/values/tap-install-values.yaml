@@ -1,3 +1,0 @@
-tap_install:
-  package_repository:
-    oci_repository: harbor.korok.tkg-vsp-lab.hyrulelab.com/tap/tap-packages
