@@ -24,7 +24,6 @@ tap_install:
         commit_strategy: direct
     tap_gui:
       service_type: ClusterIP
-      metadataStoreAutoconfiguration: true
       app_config:
         auth:
           allowGuestAccess: true
@@ -32,27 +31,16 @@ tap_install:
           locations:
             - type: url
               target: https://github.com/jaimegag/tap-zone/blob/main/tap-gui/blank/catalog-info.yaml
-        # kubernetes:
-        #   clusterLocatorMethods:
-        #     - type: 'config'
-        #       clusters:
-        #         - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
-        #           name: host
-        #           authProvider: serviceAccount
-        #           serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
-        #           skipTLSVerify: true
-        #           skipMetricsLookup: false
-        # techdocs:
-        #   builder: 'external'
-        #   publisher:
-        #     type: 'awsS3'
-        #     awsS3:
-        #       bucketName: BUCKET-NAME
-        #       credentials:
-        #         accessKeyId: AWS-READONLY-ACCESS-KEY-ID
-        #         secretAccessKey: AWS-READONLY-SECRET-ACCESS-KEY
-        #       region: AWS-REGION
-        #       s3ForcePathStyle: false
+        kubernetes:
+          clusterLocatorMethods:
+            - type: 'config'
+              clusters:
+                - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
+                  name: host
+                  authProvider: serviceAccount
+                  serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
+                  skipTLSVerify: true
+                  skipMetricsLookup: false
     metadata_store:
       ns_for_export_app_cert: "*"
       app_service_type: ClusterIP # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
