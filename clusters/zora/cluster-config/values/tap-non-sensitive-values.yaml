@@ -27,7 +27,7 @@ tap_install:
       metadataStoreAutoconfiguration: true
       app_config:
         auth:
-          allowGuestAccess: tru
+          allowGuestAccess: true
         catalog:
           locations:
             - type: url
@@ -53,9 +53,9 @@ tap_install:
         #         secretAccessKey: AWS-READONLY-SECRET-ACCESS-KEY
         #       region: AWS-REGION
         #       s3ForcePathStyle: false
-    scanning:
-      metadataStore:
-        url: "" # disable the now deprecated embedded integration. Metadata Store integration was moved out from the controller and into the grype/snyk scanners integration
+    # scanning:
+    #   metadataStore:
+    #     url: "" # disable the now deprecated embedded integration. Metadata Store integration was moved out from the controller and into the grype/snyk scanners integration
     metadata_store:
       ns_for_export_app_cert: "*"
       app_service_type: ClusterIP # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
