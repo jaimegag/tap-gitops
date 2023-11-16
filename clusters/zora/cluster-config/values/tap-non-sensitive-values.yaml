@@ -32,16 +32,16 @@ tap_install:
           locations:
             - type: url
               target: https://github.com/jaimegag/tap-zone/blob/main/tap-gui/blank/catalog-info.yaml
-        kubernetes:
-          clusterLocatorMethods:
-            - type: 'config'
-              clusters:
-                - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
-                  name: host
-                  authProvider: serviceAccount
-                  serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
-                  skipTLSVerify: true
-                  skipMetricsLookup: false
+        # kubernetes:
+        #   clusterLocatorMethods:
+        #     - type: 'config'
+        #       clusters:
+        #         - url: https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
+        #           name: host
+        #           authProvider: serviceAccount
+        #           serviceAccountToken: ${KUBERNETES_SERVICE_ACCOUNT_TOKEN}
+        #           skipTLSVerify: true
+        #           skipMetricsLookup: false
         # techdocs:
         #   builder: 'external'
         #   publisher:
@@ -53,9 +53,6 @@ tap_install:
         #         secretAccessKey: AWS-READONLY-SECRET-ACCESS-KEY
         #       region: AWS-REGION
         #       s3ForcePathStyle: false
-    # scanning:
-    #   metadataStore:
-    #     url: "" # disable the now deprecated embedded integration. Metadata Store integration was moved out from the controller and into the grype/snyk scanners integration
     metadata_store:
       ns_for_export_app_cert: "*"
       app_service_type: ClusterIP # (optional) Defaults to LoadBalancer. Change to NodePort for distributions that don't support LoadBalancer
@@ -65,24 +62,6 @@ tap_install:
       envoy:
         service:
           type: LoadBalancer
-    # cnrs:
-    #   domain_name: tap.zora.tkg-vsp-lab.hyrulelab.com
-    #   domain_template: "{{.Name}}.{{.Namespace}}.{{.Domain}}" # Hyphenated to leverage a single wildcard FQDN and cert for all things (GUI and apps)
-    #   default_tls_secret: tanzu-system-ingress/contour-tls-delegation-cert-tls
-    # appliveview:
-    #   ingressEnabled: "true"
-    # appliveview_connector:
-    #   backend:
-    #     sslDisabled: "true"
-    # accelerator:
-    #   ingress:
-    #     include: "true"
-    # package_overlays:
-    # - name: cnrs
-    #   secrets:
-    #   - name: cnrs-network-config-overlay
-    # policy:
-    #   tuf_enabled: false # By default, TUF initialization and keyless verification are deactivated.
     namespace_provisioner:
       controller: false
       sync_period: 30s
